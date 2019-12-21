@@ -43,15 +43,6 @@ app.get('/events', async (req,res)=>{
     }
 });
 
-app.get('/events', async (req,res)=>{
-    try{
-        const events = await Event.find({})
-        res.send(events)
-    }catch(e){
-        res.status(500).send()
-    }
-});
-
 app.post('/events', async (req, res) => {
     const event = new Event(req.body)
 
