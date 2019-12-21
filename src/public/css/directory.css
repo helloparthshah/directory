@@ -12,6 +12,31 @@
   text-align: center;
 }
 
+.search input{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  border: none;
+  background: #f1f1f1;
+  margin-right: 20px;
+}
+
+.search button{
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.search button:hover {
+  opacity: 1;
+}
+
 ul {
   margin: 0;
   padding: 0;

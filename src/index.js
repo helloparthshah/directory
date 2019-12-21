@@ -30,9 +30,17 @@ app.get('', async (req, res) => { // defaults to home page
 });
 
 app.get('/events', async (req,res)=>{
-    if(req.query.name)
+    if(req.query.search)
     {
-        const events = await Event.find({name:req.query.name})
+        const thename=req.query.search.toLowerCase()
+        const events = await Event.find({$or:
+            [
+                {name:{'$regex': thename,$options:'i'}},
+                {summary:{'$regex': thename,$options:'i'}},
+                {location:{'$regex': thename,$options:'i'}},
+                {time:{'$regex': thename,$options:'i'}},
+                {cost:{'$regex': thename,$options:'i'}}
+        ]})
         res.render('Index',events)
     }
     try{
