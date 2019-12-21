@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="./css/directory.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+  <script src="../post.js"></script>
+ 	 <title>Event Promotion Directory</title>
+</head>
+
+<body>
+  
+<header>
+      <ul>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/directory">Directory</a></li>
+          <li><a href="/concern">Concern</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/login">Log in</a></li>
+          <li><a href="/home">Home</a></li>
+      </ul>
+</header>
+
+<div class = "textoverlay">
+    <div class="title">
+        <h1>Our Event Promotion Directory</h1>
+    </div>
+    <div class="description">
+    	<div style="align-self: center;"><h2>Find event oppurtunites near you.</h2></div>
+    </div>
+
+</div>
+
+<button class="open-button" onclick="openForm()">Create Event</button>
+
+<div class="form-popup" id="myForm">
+  <form method="POST" action="/events" class="form-container">
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="summary"><b>What event/program are you seeking to promote? Please provide a summary of the event/program.</b></label>
+    <textarea style="height: 50px; width: 100%;" name="summary" placeholder="Summary" required></textarea>
+
+    <label for="fileToUpload"><b>Please leave relevant details such as flyers, video, and photos so that we may promote the event properly. Up to 5 files can be uploaded.</b></label>
+    <input type="file" name="fileToUpload" style="width: 100%;">
+
+    <label for="time"><b>How long does the event last?</b></label>
+    <select name="time" style="width: 100%;">  
+      <option>Choose an option</option>  
+      <option>The event is a single day</option> 
+      <option>The event occurs weekly</option> 
+      <option>The event occurs monthly</option> 
+      <option>The event occurs daily</option> 
+      <option>The event is multiple days</option> 
+      <option>The event is annual</option>   
+    </select> 
+
+    <label for="location"><b>Where will this event be held?</b></label>
+    <input type="text" placeholder="Location" name="location" required>
+
+    <label for="cost"><b>What is the cost to attend this event?</b></label>
+    <select name="cost">
+      <option>Free.</option>
+      <option>$5-10</option>
+      <option>$10-20</option>
+      <option>$20+</option>
+      <option>This event isn't free but is sliding scale, donations, and or doesn't turn away due to lack of funds.</option>
+    </select>
+
+    <button type="submit" class="btn" value="Add Event">Create</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<div class = "busDir">
+	<h1>EVENTS</h1>
+</div>
+
+
+
+<div class="containers">
+
+	<!-- First Row-->
+  <div class="container-1">
+    <div class="quarter">
+      <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #1</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+
+    <div class="quarter">
+      <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #2</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+
+    <div class="quarter">
+       <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #3</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+
+    </div>
+
+    <div class="quarter">
+    <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #4</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+  </div>
+
+
+	<!-- Second Row-->
+  <div class="container-1">
+    <div class="quarter">
+    <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #5</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+
+    <div class="quarter">
+    <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #6</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+
+    <div class="quarter">
+     <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #7</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+
+    <div class="quarter">
+    <img src ="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="event picture" style="width:100%">
+      <h1>Event #8</h1>
+      <h3>Description: ##</h3> 
+      <h3>Location: ##</h3>
+      <h3>Time: ##</h3>
+    </div>
+  </div>
+</div>
+
+<div class = "busDir">
+  <h1>LOCAL MAP</h1>
+</div>
+
+<div class="map">
+  <img src ="https://cnet2.cbsistatic.com/img/wJuaKPhBnj3N8xm_94h46TPgWBI=/2019/08/28/527cd2c5-28c8-47a0-8463-9bd18c0a0a18/google-maps-1.jpg" alt="event picture"  style="width: 100%">
+</div>
+
+
+
+
+
+</body>
+</html>
